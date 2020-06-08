@@ -1,2 +1,0 @@
-/usr/share/wyrest/devkit.ini
-/usr/share/wyrest/common.ini

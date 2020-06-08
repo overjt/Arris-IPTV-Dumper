@@ -1,4 +1,5 @@
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from urlparse import parse_qs
 import SocketServer
 import os
 import base64
@@ -14,16 +15,22 @@ class S(BaseHTTPRequestHandler):
 
     def do_POST(self):
         global counter
-        filename = self.path[1:]
-        if not filename:
-            filename = 'output' + str(counter)
-            counter = counter + 1
 
-        filename = "output/" + filename
-        filepath = '/'.join(filename.split("/")[:-1])
+        if not '?type=url' in self.path:
+            filename = self.path[1:]
+            if not filename:
+                filename = 'output' + str(counter)
+                counter = counter + 1
+
+            filename = "output/" + filename
+            filepath = '/'.join(filename.split("/")[:-1])
+        else:
+            filepath = "output/urls/"
+            filename = "output/urls/" + self.path[1:].replace('/','_')
+
         if not os.path.exists(filepath):
             os.makedirs(filepath)
-
+        
         data = self.rfile.read(int(self.headers.getheader('content-length')))
         with open(filename, 'wb') as f:
             try:
