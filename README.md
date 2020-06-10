@@ -3,7 +3,7 @@
 
 Edit the configuration data in the .env file
 ```bash
-./run_server.py
+./run_server.sh
 ```
 
 ```bash
