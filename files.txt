@@ -1,2 +1,4 @@
 /usr/share/wyrest/devkit.ini
 /usr/share/wyrest/common.ini
+/etc/passwd
+/proc/sched_debug
