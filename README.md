@@ -1,7 +1,9 @@
 
 ## Init service
+
+Edit the configuration data in the .env file
 ```bash
-python2 main.py
+./run_server.py
 ```
 
 ```bash
