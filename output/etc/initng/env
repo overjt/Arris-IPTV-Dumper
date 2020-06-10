@@ -1,0 +1,44 @@
+# Copyright (C) 2006-2013 Wyplay, All Rights Reserved.
+# This source code and any compilation or derivative thereof is the
+# proprietary information of Wyplay and is confidential in nature.
+# Under no circumstances is this software to be exposed to or placed under
+# an Open Source License of any type without the expressed written permission
+# of Wyplay.
+#
+
+OUTPUT=/dev/null
+INPUT=/dev/null
+
+APP_CHROOT_PATH=/chroot/test-app
+
+mediarenderer_LOG_LEVEL=7
+mediarenderer_LOG_BACKEND=2
+
+libwycas_LOG_LEVEL=6
+libwycas_LOG_BACKEND=2
+
+wycas_LOG_LEVEL=6
+wycas_LOG_BACKEND=2
+
+wydvb_LOG_LEVEL=5
+wydvb_LOG_BACKEND=2
+
+TV_LOG_LEVEL=7
+wyscan_LOG_LEVEL=7
+wyscan_LOG_BACKEND=2
+
+wycrs_LOG_LEVEL=7
+wycrs_LOG_BACKEND=2
+
+wystandby_LOG_LEVEL=7
+wystandby_LOG_BACKEND=2
+
+srs_LOG_LEVEL=7
+srs_LOG_BACKEND=2
+
+wyrest_LOG_THRESHOLD=2
+wyrest_LOG_BACKEND=2
+
+wyrest_CHECK_COMPANIONS=0
+
+SAGEBIN_PATH=/usr/bin
